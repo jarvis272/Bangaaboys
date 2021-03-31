@@ -1,0 +1,196 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: white;
+    height:4rem;
+   
+    display: grid;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0,.3);
+
+}
+
+@media only screen and (max-width:540px){
+    nav{
+        height: 80px;
+        margin: 0px;
+        
+    }
+   
+
+
+}
+
+@media only screen and (max-width:540px){
+   .nav-center
+   {
+       align-items:;
+   }
+}
+
+@media only screen and (max-width:540px){
+    
+    ul
+    {
+        width: 80vw !important;
+        text-align: center;
+    }
+        
+}
+
+@media only screen and (max-width:540px){
+    
+    .nav-center h4{
+        width: 20vw;
+        margin-left: 10px;
+    }
+        
+}
+
+.nav-center
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 auto;
+    width: 100vw;
+    max-width: 620px;
+}
+
+ .nav-center h4
+ {
+     font-family: sans-serif;
+     color: #49A6E9;
+     line-height: 2rem;
+     font-weight: 600;
+     letter-spacing: 4px;
+     transition: all .350s cubic-bezier(1, 0, 0, 1);
+
+ }
+
+ .nav-center h4:hover
+ {
+    font-weight: 900;
+ }
+
+
+li
+{
+    list-style: none;
+    display: inline-block;
+   
+    text-align: center;
+    background:whitesmoke;
+   
+    margin-right: 2rem;
+    padding: 0px 9px;
+    
+  
+}
+
+ul
+{
+    width: 50%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+   
+    line-height: 2rem;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    color: black;
+    font-size: larger;
+    transition: all 350ms ease;
+    letter-spacing: 0px;
+    font-weight: 500;
+    text-transform: uppercase;
+   
+   
+
+}
+
+a:hover{
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+a::after
+{
+    content: "";
+    position: relative;
+    border: 0px thin rgb(0, 0, 0,0%);
+    display: block;
+    top: 0;
+    bottom: 0px;
+    border: 1px solid rgb(0, 0, 0,0%);
+    transition: all .3s linear;
+}
+a:hover::after
+{
+    border: 1px solid rgb(0, 0, 0,100%);
+    letter-spacing: 4px;
+    
+}
+
+
+main
+{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+   
+}
+
+.container
+{
+   text-align: center;
+}
+
+.container h2
+{
+font-size: 2.5rem;
+background-color: black;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: white;
+padding: 1rem;
+border-radius: 9px;
+margin-bottom: 2.5rem;
+}
+.container h2 span
+{
+    color: #49A6E9;
+}
+
+.btn
+{
+   
+    background:transparent;
+    font-size: larger;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 12px;
+    text-transform: uppercase;
+    border : 2px solid black;
+    box-shadow: 0px 1px 3px rgb(0, 0, 0,20%);
+    transition: all .5s linear;
+}
+
+.btn-hero
+{
+    font-size: 1rem;
+    padding: .75rem 1.25rem;
+}
+
+.btn:hover
+{
+    background: black;
+    color: white;
+    box-shadow: inset 0px 1px 3px rgb(255, 255, 255,50%);;
+}
+
+
