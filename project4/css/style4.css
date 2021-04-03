@@ -13,6 +13,8 @@ body
 {   background: #f2f2f2;
     font-family: sans-serif;
     font-size: 16px;
+    
+    
 }
 
 nav
@@ -21,6 +23,8 @@ nav
     background-color: white;
     display: block;
     box-shadow: 0px 5px 20px rgb(0, 0, 0,.2);
+    z-index: 2;
+   
    
     
 }
@@ -28,22 +32,121 @@ nav
 .nav-center
 {
     width: 80%;
-   height: 70px;
     margin:0px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
 }
+
+.nav-toggle 
+{
+    display: none;
+}
+
+@media screen and (max-width:540px){
+    
+    .nav-toggle
+    {
+        display: block;
+        background: transparent;
+        border: none;
+    }
+  
+    
+
+    .list-tabs
+    {
+    
+        position: absolute;
+        z-index: 3;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        height: 10rem;
+        color: black;
+        width: 100%;
+        margin-top: 3rem;
+        background-color: white;
+    }
+
+    .list-tabs a li
+    {
+        margin-left: 1rem;
+        padding:3px;
+        display: flex;
+        width: 100%;
+
+        
+    }
+
+    a:visited
+    {
+        color: black;
+    }
+
+  .nav-center
+    {
+        width: 100%;
+        margin: 0px;
+        padding-left: 0px;
+        display: block;
+        
+    }
+
+    .visibility
+    {
+        display: none !important;
+        
+    }
+   
+    .head-container
+    {
+        width: 90% !important;
+    }
+
+    .welcome
+    {
+        font-size: 15vw !important;
+        height: 200px !important;
+    }
+
+    .desc
+    {
+        top: 0px !important;
+    }
+
+    .arrow
+    {
+        top: 0px !important;
+    }
+
+    .social{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+  
+
+}
+
+.visibility
+{
+    display: flex;
+    transition: all 3s ease-out;
+    
+}
 .list-tabs li
 {
     text-transform: capitalize;
     display: inline-block;
+    margin: 0px 9px;
     list-style: none;
     font-size: 1rem;
     line-height: 1.5rem;
     letter-spacing: 2px;
-    padding: 0px 7px;
+    padding: 0px 9px;
     box-shadow: 0px 1px 5px rgb(0, 0, 0,0);
     border: 0px solid rgb(0, 0, 0,.2);
     border-radius: 5px;
@@ -69,8 +172,10 @@ nav
 }
 .header
 {
-    width: 190px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
 }
 
 .social li
@@ -120,4 +225,233 @@ i:hover
 a{
     text-decoration: none;
 }
+
+
+.animation-area
+{
+    background: linear-gradient(to left,#8942a8,#ba383f);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+
+    
+}
+
+.boxes
+{
+    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+   
+ 
+}
+
+.boxes li
+{
+width: 100px;
+height:100px;
+position: absolute;
+display: block;
+list-style: none;
+background: rgba(255, 255, 255, 0.2);
+animation: animate 20s linear infinite;
+bottom: -150px;
+
+}
+
+.boxes li:nth-child(1)
+{
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+
+}
+
+.boxes li:nth-child(2)
+{
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 1.5s;
+    animation-duration: 12s;
+
+}
+
+.boxes li:nth-child(3)
+{
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 7.5s;
+
+}
+
+.boxes li:nth-child(4)
+{
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+
+}
+
+.boxes li:nth-child(5)
+{
+    left: 55%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+
+}
+.boxes li:nth-child(6)
+{
+    left: 35%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+
+}
+.boxes li:nth-child(7)
+{
+    left: 85%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 2s;
+    animation-duration: 17s;
+
+}
+
+.boxes li:nth-child(8)
+{
+    left: 35%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+
+.boxes li:nth-child(9)
+{
+    left: 60%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1s;
+    animation-duration: 10s;
+
+}
+
+.boxes li:nth-child(10)
+{
+    left: 20%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1.5s;
+    animation-duration: 15s;
+
+}
+
+@keyframes animate {
+    
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-1000px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.welcome
+{
+  
+    position: relative;
+    top: 70px;
+    color: white;
+    text-align: start;
+    font-size:10vw;
+    list-style: none;
+    line-height: 1.5;
+    font-weight: 600;
+    height: 230PX;
+    font-family: "Sofia";
+    text-shadow: 4px 4px 4px black;
+}
+
+.subheading
+{
+    position: relative;
+    top: 90px;
+    color: white;
+  
+   font-family: cursive;
+   text-align: start;
+    
+    
+}
+
+.head-container
+{
+    display: block;
+    position: relative;
+    
+    width: 60%;
+    padding: 10px;
+    margin: 0px auto;
+    height: 550px;
+   
+    
+    
+}
+
+.desc
+{
+    display: block;
+    color: white;
+    width: 70%;
+    font-weight: 600;
+    font-family: cursive;
+    top: 100px;
+    line-height: 1.8;
+    position: relative;
+}
+
+.arrow
+{
+    position: relative ;
+    top: 180px;
+    animation: arrowdown 1s ease-out 0s infinite;
+}
+
+.arrow i
+{
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    opacity: 1;
+    
+}
+
+@keyframes arrowdown {
+    
+    0%
+    {
+        transform: translateY(180);
+    }
+
+    100%
+    {
+        transform: translateY(40px);
+    }
+
+}
+
 
